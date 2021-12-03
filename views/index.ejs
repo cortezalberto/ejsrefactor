@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %> 
+  
+
+
+<body>
+    <%- include('./partials/header') %> 
+
+    <h1>Estoy en index de Menu</h1>
+
+    <% menu.forEach(element => { %>
+        <h4><a href="/detalle/<%= element.id %>"><%= element.titulo %></a></h4>
+      <p class="ps-text-grey">
+        <%= element.descripcionCorta %> U$S <%= element.precio %>
+      </p>
+      <br />
+       <%   }) %>
+
+
+
+
+    <%- include('./partials/footer') %> 
+
+  
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+
+
+  <body>
+    <%- include('./partials/header') %>
+
+    <h1>Estoy en detalle</h1>
+    <div>
+      <h2>
+        <%= plato.titulo %>
+      </h2>
+      <br />
+      <h4>      
+        <%= plato.descripcionCorta %>
+      </h4>
+      <p>
+ 
+        <% if(plato.descripcionDetallada.length) {%>
+          <%= plato.descripcionDetallada %>
+            <%} 
+            else {
+               %> Plato típico <%} %>U$S
+                <%= plato.precio %>
+      </p>
+      <br />
+    </div>
+
+
+
+      <%- include('./partials/footer') %>
+
+
+  </body>
+
+</html>
